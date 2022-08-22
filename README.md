@@ -7,3 +7,4 @@ This module was born from the need of a simple XML parser who leaves all the nam
 
 # TODO
 - Add support for the default namespace
+- Add typing annotations to all method signatures and class definitions
