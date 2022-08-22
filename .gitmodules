@@ -1,0 +1,3 @@
+[submodule "stokenizer"]
+	path = stokenizer
+	url = git@github.com:a-rium/stokenizer.git
