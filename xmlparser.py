@@ -81,6 +81,8 @@ def parse_tag_attributes_and_namespaces(tokens: list[stokenizer.Token], i: int) 
 			attribute_value = token.unquoted()
 			if prefix == 'xmlns':
 				namespaces[postfix] = attribute_value
+			elif postfix == 'xmlns':
+				namespaces[''] = attribute_value
 			else:
 				attributes[attribute_key] = attribute_value
 			i += 1
