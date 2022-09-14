@@ -97,6 +97,9 @@ def parse_node(tokens: list[stokenizer.Token], i=0) -> XMLNode:
 		if tokens[i].kind == stokenizer.TokenKind.OPERATOR and tokens[i].text == ':':
 			tagname += ':' + tokens[i+1].text
 			i += 2
+		while tokens[i].kind == stokenizer.TokenKind.OPERATOR and tokens[i].text == '.':
+			tagname += '.' + tokens[i+1].text
+			i += 2
 		
 		attributes, namespaces, i = parse_tag_attributes_and_namespaces(tokens, i)
 
